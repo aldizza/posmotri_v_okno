@@ -16,6 +16,9 @@ html {
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
+  height: 100vh; 
 }
 
 h1,
@@ -231,7 +234,6 @@ input {
 }
 
 .search-form__pseudo-checkbox {
-  content: "";
   display: inline-block;
   width: 19px;
   height: 19px;
