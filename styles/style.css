@@ -46,7 +46,7 @@ ol {
   justify-content: space-between;
   flex-direction: row;
   align-items: end;
-  min-width: 1140px;
+  max-width: 1140px;
   gap: 30px;
 }
 
@@ -55,7 +55,7 @@ ol {
   grid-template-columns: 225px 212px 194px;
   place-items: start;
   width: 711px;
-  height: 54px;
+  min-height: 54px;
   gap: 40px;
 }
 
@@ -106,13 +106,12 @@ ol {
   width: 394px;
   padding: 2px;
   align-items: flex-start;
-  object-fit: cover;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  flex-shrink: 0;
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
@@ -130,30 +129,25 @@ ol {
 }
 
 .search-form__textfield {
-  color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  width: 100%;
-}
-
-input {
   display: flex;
-  width: 225px;
-  height: 27px;
+  width: 100%;
+  min-height: 27px;
   align-items: center;
-  gap: 10px;
-  background-color: transparent;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-}
+  background-color: transparent;
+} 
 
 .title {
   color: #fff;
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -163,21 +157,17 @@ input {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
-  font-size: 75px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 94%; /* 70.5px */
-  text-transform: uppercase;
 }
 
 .content__card-link {
   text-decoration: none;
   color: #ffffff;
+  display: block;
+  margin: 2px;
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
@@ -218,7 +208,6 @@ input {
 
 .search-form__checkbox-list {
   display: flex;
-  width: 212px;
   justify-content: space-between;
   padding-bottom: 5px;
 }
@@ -234,28 +223,24 @@ input {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
-  flex-shrink: 0;
-  flex-grow: 0;
   border: 1px solid #fff;
   gap: 5px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-  position: relative;
 }
 
 .button {
+  display: flex;
+  align-self: center;
+  font-family: "Fira Sans Condensed", sans-serif;
   background-color: transparent;
   display: flex;
-  width: 194px;
-  height: 34px;
+  min-height: 34px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
   border: 1px solid #fff;
   margin-top: 22px;
   color: #fff;
@@ -268,43 +253,28 @@ input {
 }
 
 .search-form__submit-button {
-  border: 1px solid #fff;
+  width: 100%;
 }
 
 .more-button {
   width: 399px;
-  height: 34px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  border: 1px solid #fff;
-  color: #fff;
-  text-align: center;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 }
 
-input:focus {
+.search-form__label:focus {
   outline: none;
 }
 
-label:has(:focus-visible) {
-  outline: none;
-  border: 1px solid #fff;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: -2px;
 }
 
-input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox[type="checkbox"]:checked+ .search-form__pseudo-checkbox::before{
   content: "";
   background: #fff;
   display: inline-block;
   width: 15px;
   height: 15px;
-  left: 1.2px;
-  top: 1.2px;
-  position: absolute;
 }
 
 .button:focus {
@@ -312,12 +282,12 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .button:active {
-  border: 1px solid #fff;
   background: #545050;
 }
 
 .button:focus-visible {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: -3px; 
 }
 
 .button:hover {
@@ -326,11 +296,6 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__card-link_current {
   background: #545050;
-}
-
-.content__card-link {
-  display: block;
-  margin: 2px;
 }
 
 .content__card-link:focus {
@@ -346,5 +311,5 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 }
 
 .content__card-link:focus-visible {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
 }
